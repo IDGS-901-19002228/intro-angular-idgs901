@@ -22,7 +22,12 @@ export class OperasBasComponent {
     switch(this.operacionSeleccionada){
       case 'suma':this.resultado=this.num1+this.num2;
         break;
-      
+      case 'resta':this.resultado=this.num1-this.num2;
+        break;
+      case 'multiplicacion':this.resultado=this.num1*this.num2;
+        break;
+      case 'division':this.resultado=this.num1/this.num2;
+        break;
     }
   }
 
