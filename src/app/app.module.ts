@@ -6,6 +6,8 @@ import { utlComponent } from './utl/utl.component';
 import { ievnComponent } from './ievn/ievn.component';
 import { IricComponent } from './grupos/iric/iric.component';
 import { MenuComponent } from './grupos/menu/menu.component';
+import { FormsModule } from '@angular/forms';
+import { SumaComponent } from './grupos/formularios/suma/suma.component';
 
 @NgModule({
   declarations: [
@@ -13,10 +15,12 @@ import { MenuComponent } from './grupos/menu/menu.component';
     utlComponent,
     ievnComponent,
     IricComponent,
-    MenuComponent
+    MenuComponent,
+    SumaComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
