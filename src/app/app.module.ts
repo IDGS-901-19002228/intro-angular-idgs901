@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { SumaComponent } from './grupos/formularios/suma/suma.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OperasBasComponent } from './grupos/formularios/operas-bas/operas-bas.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { OperasBasComponent } from './grupos/formularios/operas-bas/operas-bas.c
   imports: [
     BrowserModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
