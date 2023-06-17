@@ -6,5 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./operas-bas.component.css']
 })
 export class OperasBasComponent {
+  //El signo de ! sirve para  no inicializar las variables declaradas
+  num1!:number;
+  num2!:number;
+  resultado!:number;
+  operacionSeleccionada:string='suma';
+  tipoOperaciones=[
+    'suma',
+    'resta',
+    'multiplicacion',
+    'division'
+  ];
+
+  calcular(){
+    switch(this.operacionSeleccionada){
+      case 'suma':this.resultado=this.num1+this.num2;
+        break;
+      
+    }
+  }
 
 }
