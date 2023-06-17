@@ -8,6 +8,8 @@ import { IricComponent } from './grupos/iric/iric.component';
 import { MenuComponent } from './grupos/menu/menu.component';
 import { FormsModule } from '@angular/forms';
 import { SumaComponent } from './grupos/formularios/suma/suma.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { OperasBasComponent } from './grupos/formularios/operas-bas/operas-bas.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { SumaComponent } from './grupos/formularios/suma/suma.component';
     ievnComponent,
     IricComponent,
     MenuComponent,
-    SumaComponent
+    SumaComponent,
+    OperasBasComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
