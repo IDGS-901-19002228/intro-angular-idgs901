@@ -19,20 +19,28 @@
             <table class="table" *ngIf="alumnosIric.length">
                 <thead>
                     <tr>
+                        <th>
+                            <button (click)="showImage()" class="btn btn-primary" type="button">
+                                {{muestraImg?'Oculta ':'Muestra '}}Imagen</button>
+                        </th>
                         <th>Matricula</th>
                         <th>Nombre</th>
                         <th>Edad</th>
                         <th>Correo</th>
-                        <th>Foto</th>
+                        <!--<th>Foto</th>-->
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor="let alumno of alumnosIric">
+                        <td><img *ngIf="muestraImg" [src]="alumno.foto"
+                            [title]="alumno.nombre"
+                            [style.width.px]="imageWidth"
+                            [style.margin.px]="imageMargin"></td>
                         <td>{{alumno.matricula}}</td>
                         <td>{{alumno.nombre}}</td>
                         <td>{{alumno.edad}}</td>
                         <td>{{alumno.correo}}</td>
-                        <td>{{alumno.foto}}</td>
+                        <!--<td>{{alumno.foto}}</td>-->
                     </tr>
                 </tbody>
             </table>
