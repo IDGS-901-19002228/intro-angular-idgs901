@@ -22,7 +22,7 @@
                 </div>
                 <!--- XXXXXXXXXXXXXXXXXXXXX -->
                 <div *ngIf="alumnoForm.get('nombre')?.touched && alumnoForm.get('nombre')?.errors?.['minlength']" class="alert alert-danger">
-                    La nombre debe ser mas larga que {{alumnoForm.get('nombre')?.errors?.['minlength']?.requiredLength}}
+                    La nombre debe ser mas largo que {{alumnoForm.get('nombre')?.errors?.['minlength']?.requiredLength}}
                 </div>
             </div>
             <div class="mb-4">
@@ -62,5 +62,29 @@
     <div class="col-6">
         <h1>Registros</h1>
         <!-- Hacer una tabla -->
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Matricula</th>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                        <th>Correo</th>
+                        <th>Foto</th>
+                        <th>Calificacion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let alumno of alumnos">
+                        <td>{{alumno.matricula}}</td>
+                        <td>{{alumno.nombre | uppercase}}</td>
+                        <td>{{alumno.edad}}</td>
+                        <td>{{alumno.correo}}</td>
+                        <td>{{alumno.foto}}</td>
+                        <td>{{alumno.calif}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
